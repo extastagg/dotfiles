@@ -30,6 +30,11 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Format
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 
 " Languages Plugins
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -49,12 +54,9 @@ call plug#end()
 set termguicolors
 
 " Configure Theme
-" let ayucolor="mirage" " for mirage version of theme
-" colorscheme nord
-
-autocmd vimenter * ++nested colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
-let g:airline_theme='gruvbox'
+let ayucolor="dark"
+colorscheme ayu
+let g:airline_theme='ayu_dark'
 
 " --- BEGIN TELESCOPE CONFIG ---
 
@@ -233,6 +235,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-toml', 'coc-rust-analyzer', 'coc-clangd', 'coc-tsserver', 'coc-pyright']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-toml', 'coc-rust-analyzer', 'coc-clangd', 'coc-tsserver', 'coc-pyright', 'coc-markdownlint']
 
 " --- END COC CONFIG
