@@ -7,6 +7,8 @@ set shiftwidth=4
 set noswapfile
 set clipboard+=unnamedplus
 set encoding=UTF-8
+set fileencoding=utf-8
+set termencoding=utf-8
 set nowrap
 
 " Set mapleader key
@@ -77,6 +79,11 @@ require('telescope').setup{
 EOF
 
 " --- END TELESCOPE CONFIG ---
+
+" --- BEGIN MARKDOWN CONFIG ---
+let g:vim_markdown_folding_disabled = 1
+
+" --- END MARKDOWN CONFIG ---
 
 " --- BEGIN COC CONFIG ---
 
